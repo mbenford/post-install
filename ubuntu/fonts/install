@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+FONTS_DIR="$HOME/.local/share/fonts"
+mkdir -p "$FONTS_DIR"
+
+cat fonts.txt | xargs -I {} wget -P "$FONTS_DIR" {}
+
+for file in $FONTS_DIR/*.zip; do
+	unzip -d $FONTS_DIR -j $file "*.ttf"
+	rm -f $file	
+done
+
+fc-cache -f -v

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 20
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250

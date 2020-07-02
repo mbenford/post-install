@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+awk -F"/" '{print $5}' extensions.txt | xargs -I {} ./gnomeshell-extension-manage --install --user --extension-id {}

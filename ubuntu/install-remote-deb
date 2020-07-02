@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+[ -z "$1" ] && { >&2 echo "error: missing deb url"; exit 1; }
+
+DEB_FILE=$(./download $1)
+function cleanup {
+	rm -rf "$(dirname $DEB_FILE)"
+}
+trap cleanup EXIT SIGTERM SIGKILL
+
+sudo apt install -y "$DEB_FILE"
+

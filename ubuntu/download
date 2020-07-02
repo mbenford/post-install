@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+[ -z "$1" ] && { >&2 echo "error: missing download url"; exit 1; }
+
+TEMP_DIR="$(pwd)/$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
+mkdir -p "$TEMP_DIR"
+
+wget --trust-server-names --directory-prefix "$TEMP_DIR" $1
+echo "$TEMP_DIR/$(ls $TEMP_DIR | head -n1)"

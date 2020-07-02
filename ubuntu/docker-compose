@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o $HOME/bin/docker-compose
+
+chmod +x $HOME/bin/docker-compose

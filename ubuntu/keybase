@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+./install-remote-deb "https://prerelease.keybase.io/keybase_amd64.deb"
+run_keybase
