@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+./install-remote-deb "https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/amd64/albert_0.16.3-0_amd64.deb"

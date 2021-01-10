@@ -1,7 +1,0 @@
-#!/bin/bash
-
-set -e
-
-mkdir -p $HOME/bin
-mkdir -o $HOME/tmp
-mkdir -o $HOME/dev

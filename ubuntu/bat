@@ -2,4 +2,4 @@
 
 set -e
 
-./install-remote-deb "https://github.com/sharkdp/bat/releases/download/v0.15.1/bat_0.15.1_amd64.deb"
+./install-remote-deb "https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb"
